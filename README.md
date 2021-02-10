@@ -1,2 +1,2 @@
 # Improved-Admin-System
-https://mtxserv.com/forums/threads/administration-improved-ticket-system.78245/
+https://mtxserv.com/forums/ressources/improved-admin-system.2660/
