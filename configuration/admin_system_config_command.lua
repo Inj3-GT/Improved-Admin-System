@@ -7,6 +7,8 @@
 
 --(Redémarrage du serveur nécessaire, si vous changez une commande)
 
+Admin_System_Global.OverrideOpenTick = true  --- true = Remplacer /// et /// + message, le panel de création du ticket va s'ouvrir à la place.
+
 --- // Commande Console
 
 Admin_System_Global.Mode_AddCmd_NoClip = "admin_noclip" --- Activer/Désactiver le noclip.

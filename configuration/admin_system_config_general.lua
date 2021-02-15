@@ -30,19 +30,21 @@ if SERVER then
 
      --- //
 
-     Admin_System_Global.Admin_System_Ressource = true --- // true = Activer le téléchargement des contents au chargement du serveur / false = Désactiver le téléchargement des contents au chargement du serveur.
+     Admin_System_Global.Admin_System_Ressource = 1 --- 0 = Aucun téléchargement des ressources automatiques / 1 = Workshop / 2 = FastDL
 
      Admin_System_Global.Admin_System_Save = "Data" --- // Sauvegarde des données / "Data", "SQLite".
 
-     Admin_System_Global.Admin_System_HideNotifAdm = false --- True = Cacher la notification lorsqu'un joueur utilise la commande pour passer en mode administrateur.
+     --- //
+
+     Admin_System_Global.Admin_System_HideNotifAdm = false --- true = Cacher la notification lorsqu'un joueur utilise la commande pour passer en mode administrateur.
 
      --- //
 
-     Admin_System_Global.SwitchAutoJob = false --- True = Si le mode administrateur est actif, vous serez automatiquement redirigé dans le job ci-dessous "Admin_System_Global.SwitchAutoJobTbl".
+     Admin_System_Global.SwitchAutoJob = false --- true = Si le mode administrateur est actif, vous serez automatiquement redirigé dans le job ci-dessous "Admin_System_Global.SwitchAutoJobTbl".
 
      Admin_System_Global.SwitchAutoJobTbl = "Administrateur en Service" --- Exemple, indiquer votre job ici si "Admin_System_Global.SwitchAutoJob" est en true.
 
-     Admin_System_Global.SwitchOldJob = false --- True = Revenir à l'état d'origine de votre ancien job après avoir désactivé le mode admin.
+     Admin_System_Global.SwitchOldJob = true --- true = Revenir à l'état d'origine de votre ancien job après avoir désactivé le mode admin.
 
      --- //
 
