@@ -5,7 +5,7 @@
 --- // Improved Admin System
 --- // true = activer, false = désactiver
 
---(Redémarrage du serveur nécessaire, si vous changez une commande)
+--- (Redémarrage du serveur nécessaire, si vous changez une commande)
 
 Admin_System_Global.OverrideOpenTick = true  --- true = Remplacer /// et /// + message automatiquement, le panel de création du ticket va s'ouvrir à la place.
 

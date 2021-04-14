@@ -8,7 +8,7 @@ if SERVER then return end
 --- //
 Admin_System_Global.Mode_HUD = true --- // Activer l'affichage des informations sur les véhicules/joueurs en mode Admin.
 Admin_System_Global.Mode_Vcmod = true --- // true = Si le VCmod est présent sur votre serveur.
-Admin_System_Global.Mode_Bypass = { ----- // Indiquer ici les groupes qui peuvent contourner l'affichage des informations sur les véhicules/joueurs en mode Admin, ils seront invisibles aux autres admins.
+Admin_System_Global.Mode_Bypass = { --- // Indiquer ici les groupes qui peuvent contourner l'affichage des informations sur les véhicules/joueurs en mode Admin, ils seront invisibles aux autres admins.
      ["superadmin"] = true,
 }
 

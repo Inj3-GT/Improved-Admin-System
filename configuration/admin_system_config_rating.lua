@@ -5,8 +5,8 @@
 --- // Improved Admin System
 --- // true = activer, false = désactiver
 
-Admin_System_Global.RateAdminEnable = true ---- // true = Activer le système d'avis support (évaluation) - // Désactiver le système d'avis support
-Admin_System_Global.RateAdminDelete = { ----- // Qui peut supprimer un commentaire créer par un joueur ?
+Admin_System_Global.RateAdminEnable = true --- // true = Activer le système d'avis support (évaluation) - // Désactiver le système d'avis support
+Admin_System_Global.RateAdminDelete = { --- // Qui peut supprimer un commentaire créer par un joueur ?
      ["GerantSTAFF"] = true,
      ["superadmin"] = true,
 }

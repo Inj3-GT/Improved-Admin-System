@@ -19,7 +19,7 @@ Admin_System_Global.WhiteList_ContextDefaut = { --- // Les groupes qui verront l
 --- // Context Menu Action Improved Admin System
 Admin_System_Global.Action_On = true --- // true = Activer le Context Menu Action de Improved Admin System.
 Admin_System_Global.Action_Perm = false --- // true = Les administrateurs peuvent activer le context menu action seulement en administrateur en service, et s'ils sont dans le groupe "Admin_System_Global.Action_Table" / false = Seul le groupe "Admin_System_Global.Action_Table" sera pris en compte pour ouvrir le context menu action.
-Admin_System_Global.Action_Table = { ----- // Indiquer ici les groupes qui peuvent accéder aux Context Menu Action.
+Admin_System_Global.Action_Table = { --- // Indiquer ici les groupes qui peuvent accéder aux Context Menu Action.
      ["ModoTest"] = true,
      ["ModoTestVIP"] = true,
      ["Moderateur"] = true,

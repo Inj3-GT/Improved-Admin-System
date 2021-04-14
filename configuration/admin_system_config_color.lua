@@ -30,7 +30,7 @@ Admin_System_Global.ColorContextLeft = Color(52,73,94)
 ----------------------\\ Context menu - Right
 Admin_System_Global.ContextTitleRight = Color(236, 240, 241)
 Admin_System_Global.ContextRight = Color(52,73,94) 
-Admin_System_Global.ContextBackButtonRight = Color( 0, 0, 0, 100) --- Background button
+Admin_System_Global.ContextBackButtonRight = Color( 0, 0, 0, 100)
 
 Admin_System_Global.ContextActionAdminHoverRight = Color( 39, 174, 96 ) 
 Admin_System_Global.ContextActionAdminHoverRight_1 = Color( 236, 240, 241 )
