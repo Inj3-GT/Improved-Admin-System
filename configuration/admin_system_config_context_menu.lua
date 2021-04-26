@@ -132,12 +132,32 @@ Admin_System_Global.ContextMenu_TblFunc = { --- // Button du context menu de dro
           end},
 
           [7] = {Name = "Me démenotter", Icon = "icon16/cut_red.png", OnlyForAdmin = true, Func = function()
-          if not RHandcuffsConfig then return LocalPlayer():PrintMessage( HUD_PRINTTALK, "Realistic Handcuffs n'est pas installé sur votre serveur !" ) end
-          if LocalPlayer():GetNWBool("rhc_cuffed") then
-               LocalPlayer():ConCommand("rhc_cuffplayer " ..LocalPlayer():Nick())
-          else
-               LocalPlayer():PrintMessage( HUD_PRINTTALK, "Vous n'êtes pas menotté !" )
+          if RHandcuffsConfig then
+               if LocalPlayer():GetNWBool("rhc_cuffed") then
+                    LocalPlayer():ConCommand("rhc_cuffplayer " ..LocalPlayer():Nick())
+					return
+               else
+                    LocalPlayer():PrintMessage( HUD_PRINTTALK, "Vous n'êtes pas menotté !" )
+               end
           end
+          if RKidnapConfig then
+               if LocalPlayer():GetNWBool("rks_unrestrain") then
+                    LocalPlayer():ConCommand("rks_unrestrain " ..LocalPlayer():Nick())
+					return
+               else
+                    LocalPlayer():PrintMessage( HUD_PRINTTALK, "Vous n'avez pas de serflex !" )
+               end
+          end
+          if Realistic_Police then
+		  -- I haven't found any NW or other way to return the status on the client side, the developer wouldn't answer me to Discord, I did the best I could to adapt it..
+               net.Start("Admin_Sys:Action")
+               net.WriteUInt( 10, 16 )
+               net.WriteBool(false)
+               net.SendToServer()
+               return
+          end
+
+          LocalPlayer():PrintMessage( HUD_PRINTTALK, "Realistic Handcuffs ou Realistic_Police ou Realistic Kidnaping n'est pas installé sur votre serveur !" )
           end}
      }
 }

@@ -8,6 +8,9 @@ if SERVER then return end
 Admin_System_Global.NotifTick = Color(49, 71, 94, 250)
 Admin_System_Global.NotifTickText = Color( 	236, 240, 241 )
 --\\ 
+----------------------\\ Notification - Popup
+Admin_System_Global.NotifPopup = Color(52, 73, 94) 
+--\\ 
 ----------------------\\ Ticket
 Admin_System_Global.TicketBorder = Color(52, 73, 94, 250)
 Admin_System_Global.TicketText = Color(236, 240, 241)
@@ -52,6 +55,8 @@ Admin_System_Global.CmdGeneralColorBut = Color(52,73,94)
 Admin_System_Global.CmdGeneralColorButText = Color(236, 240, 241)
 --\\
 ----------------------\\ Creation ticket
+Admin_System_Global.CreatetickColorCtr = {r = 52, g = 73, b = 94}
+Admin_System_Global.CreatetickColorInfos = Color(52 ,73 , 94)
 Admin_System_Global.CreatetickColor = Color(44, 62, 80)
 Admin_System_Global.CreatetickColorTitle = Color(236, 240, 241)
 Admin_System_Global.CreatetickColorBackground = Color(0,0,0,100)
@@ -63,6 +68,7 @@ Admin_System_Global.CreatetickScrollBar_Up = Color(236, 240, 241)
 Admin_System_Global.CreatetickScrollBar_Down = Color(236, 240, 241)
 --\\
 ----------------------\\ Creation ticket - Complement
+Admin_System_Global.CreatetickColorCompCtr = {r = 52, g = 73, b = 94}
 Admin_System_Global.CreatetickColorComp = Color(44, 62, 80)
 Admin_System_Global.CreatetickColorCompTitle = Color(236, 240, 241)
 Admin_System_Global.CreatetickColorCompTextChar = Color(192, 57, 43)

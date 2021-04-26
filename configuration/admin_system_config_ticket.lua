@@ -7,7 +7,7 @@
 
 --- //
 Admin_System_Global.TicketLoad = true --- true = Activer le système de ticket / false = Désactiver le système de ticket.
-Admin_System_Global.Ticket_TakePerm = true --- true : Les tickets peuvent être pris en charge et gérer que si vous êtes en mode administrateur. / - False = Les tickets peuvent être pris en charge hors mode administrateur.
+Admin_System_Global.Ticket_TakePerm = false --- IMPORTANT = true : Les tickets peuvent être pris en charge et gérer que si vous êtes en mode administrateur. / - False = Les tickets peuvent être pris en charge hors mode administrateur.
 Admin_System_Global.CharMax = 100 --- // Indiquer ici le nombre de caractère limite maximum que le joueur peut inclure dans un ticket.
 --- //
 
@@ -31,7 +31,7 @@ if CLIENT then
      Admin_System_Global.Ticket_TicketVisible = 3 --- // Indiquer ici le maximum de ticket qui seront visibles sur votre écran.
      --- //
      Admin_System_Global.Ticket_CachePCharge_Text = "Un administrateur"  --- // Le texte qui va être remplacé, si vous avez caché le nom lors de la prise en charge.
-     Admin_System_Global.Notif_Son = "buttons/button6.wav"  --- // Son lorsqu'un ticket est reçu -- https://maurits.tv/data/garrysmod/wiki/wiki.garrysmod.com/index8f77.html
+     Admin_System_Global.Notif_Son = "ui/hint.wav"  --- // Son lorsqu'un ticket est reçu -- https://maurits.tv/data/garrysmod/wiki/wiki.garrysmod.com/index8f77.html
      Admin_System_Global.Ticket_NoText = "Le support est actuellement hors ligne, veuillez nous contacter via notre Teamspeak ---> teamspeak5.mtxserv.fr:10142" --- // Le texte a affiché s'il n'y a aucun administrateur en ligne.
      --- //
      Admin_System_Global.Ticket_PosRdm_H  = "haut" --- // La positions des tickets vertical, "haut", "milieu".
