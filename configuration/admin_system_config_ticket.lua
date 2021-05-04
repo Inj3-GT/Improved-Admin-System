@@ -35,7 +35,7 @@ if CLIENT then
      Admin_System_Global.Ticket_NoText = "Le support est actuellement hors ligne, veuillez nous contacter via notre Teamspeak ---> teamspeak5.mtxserv.fr:10142" --- // Le texte a affiché s'il n'y a aucun administrateur en ligne.
      --- //
      Admin_System_Global.Ticket_PosRdm_H  = "haut" --- // La positions des tickets vertical, "haut", "milieu".
-     Admin_System_Global.Ticket_PosRdm_W  = "gauche" --- // La positions des tickets horizontal, "gauche", "droite".
+     Admin_System_Global.Ticket_PosRdm_W  = "droite" --- // La positions des tickets horizontal, "gauche", "droite".
 else
      Admin_System_Global.Ticket_Text = "Le ticket a bien été envoyé, temps de réponse estimé max : 10 minutes !" --- // Le texte a affiché lorsqu'un joueur a envoyé un ticket aux administrateurs.
      --- //

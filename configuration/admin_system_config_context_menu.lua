@@ -104,13 +104,13 @@ Admin_System_Global.ContextMenu_TblFunc = { --- // Button du context menu de dro
      },
      ["Admin Action"] = {
           [1] = {Name = Admin_System_Global.lang["contextmenu_adminmod"], Icon = "icon16/eye.png",  OnlyForAdmin = true, Func = function()
-          if LocalPlayer():GetNWBool("Admin_Sys_Status") then LocalPlayer():PrintMessage( HUD_PRINTTALK, Admin_System_Global.lang["contextmenu_adminmodeon"] ) return end
+          if LocalPlayer():AdminStatusCheck() then LocalPlayer():PrintMessage( HUD_PRINTTALK, Admin_System_Global.lang["contextmenu_adminmodeon"] ) return end
           net.Start("Admin_Sys:Cmd_Status")
           net.SendToServer()
           end},
 
           [2] = {Name = Admin_System_Global.lang["contextmenu_rpmod"], Icon = "icon16/house.png", OnlyForAdmin = true, Func = function()
-          if not LocalPlayer():GetNWBool("Admin_Sys_Status") then LocalPlayer():PrintMessage( HUD_PRINTTALK, Admin_System_Global.lang["contextmenu_adminmodeoff"] ) return end
+          if not LocalPlayer():AdminStatusCheck() then LocalPlayer():PrintMessage( HUD_PRINTTALK, Admin_System_Global.lang["contextmenu_adminmodeoff"] ) return end
           net.Start("Admin_Sys:Cmd_Status")
           net.SendToServer()
           end},
@@ -151,7 +151,7 @@ Admin_System_Global.ContextMenu_TblFunc = { --- // Button du context menu de dro
           if Realistic_Police then
 		  -- I haven't found any NW or other way to return the status on the client side, the developer wouldn't answer me to Discord, I did the best I could to adapt it..
                net.Start("Admin_Sys:Action")
-               net.WriteUInt( 10, 16 )
+               net.WriteUInt( 10, 4 )
                net.WriteBool(false)
                net.SendToServer()
                return
