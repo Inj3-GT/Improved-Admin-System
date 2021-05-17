@@ -28,18 +28,14 @@ if SERVER then
      Admin_System_Global.Admin_System_Ressource = 1 --- 0 = Aucun téléchargement des ressources automatiques / 1 = Workshop / 2 = FastDL
      Admin_System_Global.Admin_System_Save = "Data" --- // Sauvegarde des données / "Data", "SQLite".
      --- //
+     Admin_System_Global.FixShittingAddon_1 = false --- Avez-vous le script "Active Camouflage" (https://steamcommunity.com/sharedfiles/filedetails/?id=308977650), si oui placez la variable en true.
+     --- //
+     Admin_System_Global.OverrideOpenTick = true  --- true = Remplacer /// et /// + message automatiquement, le panel de création du ticket va s'ouvrir à la place.
      Admin_System_Global.Admin_System_HideNotifAdm = false --- true = Cacher la notification lorsqu'un joueur utilise la commande pour passer en mode administrateur.
      --- //
      Admin_System_Global.SwitchAutoJob = false --- true = Activé le système de changement de job, vous serez automatiquement redirigé dans le métier ci-dessous "Admin_System_Global.SwitchAutoJobTbl".
      Admin_System_Global.SwitchAutoJobTbl = "Administrateur en Service" --- Exemple, indiquer votre job ici si "Admin_System_Global.SwitchAutoJob" est en true.
      Admin_System_Global.SwitchOldJob = false --- true = Revenir à l'état d'origine de votre ancien job après avoir désactivé le mode admin. (rétablie = job, position, arme, armure, vie) / false = désactiver
-     --- //
-     Admin_System_Global.Ticket_Job_Bool = false --- // Si true alors les jobs seront prise en compte, les tickets ne seront plus reçus et le mode admin ne pourra plus être activé si vous n'êtes pas dans le bon job, ils seront reçu que si vous appartenez au bon groupe "Admin_System_Global.General_Permission" , et si vous êtes dans le bon job du groupe "Admin_System_Global.Ticket_Job" ci-dessous.
-     --- Attention à lire : si vous activez cette variable, les tickets ne seront plus visible et le mode admin ne pourra plus être activé en dehors du job ou des jobs ci-dessous dans "Admin_System_Global.Ticket_Job".
-     Admin_System_Global.Ticket_Job = { --- // Indiquer ici le nom des jobs qui seront prise en compte, qui peuvent traiter/afficher les tickets, et activer le Mode Admin.
-          ["Administrateur en Service"] = true,
-     }
-
      --- //
      Admin_System_Global.Admin_System_ForceNoClip = false --- // true = Force le passage en noclip aux administrateurs en mode administrateur. / false = Les administrateurs peuvent désactiver le noclip en mode admin.
      Admin_System_Global.ForceNoClip_WhiteList = { --- // Indiquer ici les groupes WhiteList ne seront pas inclu dans le ForceNoClip.
@@ -59,7 +55,10 @@ if SERVER then
           ["GerantSTAFF"] = true,
           ["superadmin"] = true,
      }
-
+     --- // Groupe pouvant accéder aux mode streamer (les tickets ne seront plus visibles.)
+     Admin_System_Global.StreamMod = { --- // Indiquer vos groupes ici
+          ["superadmin"] = true,
+     }
      --- //
      Admin_System_Global.Remb_On = true --- // true = Activer le système de remboursement. false = Désactiver le système de remboursement.
      Admin_System_Global.Remb_Death = true --- // true = Les joueurs qui sont mort par suicide sont ajoutés dans le système de remboursement.
