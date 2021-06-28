@@ -141,8 +141,8 @@ Admin_System_Global.ContextMenu_TblFunc = { --- // Button du context menu de dro
                end
           end
           if RKidnapConfig then
-               if LocalPlayer():GetNWBool("rks_unrestrain") then
-                    LocalPlayer():ConCommand("rks_unrestrain " ..LocalPlayer():Nick())
+               if LocalPlayer():GetNWBool("rks_restrained") then
+					 LocalPlayer():ConCommand("rks_togglerestrains " ..LocalPlayer():Nick())
 					return
                else
                     LocalPlayer():PrintMessage( HUD_PRINTTALK, "Vous n'avez pas de serflex !" )

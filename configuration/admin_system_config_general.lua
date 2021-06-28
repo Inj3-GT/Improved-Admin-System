@@ -23,10 +23,12 @@ Admin_System_Global.General_Permission = { --- // Indiquer ici les groupes qui p
      ["superadmin"] = {Level = 100},
 }
 
+Admin_System_Global.Admin_System_ZoneAdminSize = 150 --- // Indiquer ici la taille de vos zones administrateurs (150 par défaut longueur-largeur/valeur minimal maximum), augmenter le nombre pour agrandir la zone administrateur.
+
 if SERVER then
      --- //
      Admin_System_Global.Admin_System_Ressource = 1 --- 0 = Aucun téléchargement des ressources automatiques / 1 = Workshop / 2 = FastDL
-     Admin_System_Global.Admin_System_Save = "Data" --- // Sauvegarde des données / "Data", "SQLite".
+     Admin_System_Global.Admin_System_Save = 1 --- // Sauvegarde des données(MySQL soon) / 1 = "Data", 2 = "SQLite".
      --- //
      Admin_System_Global.FixShittingAddon_1 = false --- Avez-vous le script "Active Camouflage" (https://steamcommunity.com/sharedfiles/filedetails/?id=308977650), si oui placez la variable en true.
      --- //
@@ -46,8 +48,6 @@ if SERVER then
      Admin_System_Global.PhysGun_Freeze = false --- // Activé le système pour freeze un joueur lorsqu'il est attrapé avec le Physics Gun, et/ou réduire sa vitesse d'impact.
      Admin_System_Global.PhysGun_ProtectImpactGround = false --- // Si un joueur est lâché d'une hauteur élevée par le physics gun, sa vitesse sera réduite à zéro avant impact sur le sol (aucun dégât subi).
      Admin_System_Global.PhysGun_Touche = IN_ATTACK2 --- // La Touche pour freeze un joueur lorsqu'il est attrapé avec le Physics Gun (clique droit par défaut) . (https://wiki.facepunch.com/gmod/Enums/IN)
-     --- //
-     Admin_System_Global.Admin_System_ZoneAdminDist = 1300 --- // Indiquer ici la distance maximum à inclure entre les zones administrateurs (minimum conseillé : 1000).
      --- //
      Admin_System_Global.AntiSpam_Gen = 1.5 --- // Temps en seconde en général lorsque l'administrateur va pouvoir de nouveau effectuer une action / Anti-SPAM.
      --- //
@@ -91,6 +91,7 @@ if SERVER then
 else
      --- //
      Admin_System_Global.NotifPopup_Sound = "buttons/button24.wav" --- // Son de la notification Popup (https://maurits.tv/data/garrysmod/wiki/wiki.garrysmod.com/index8f77.html)
+     Admin_System_Global.FixForceRender = true --- Rétablir automatiquement le cloak en mode administrateur si l'un de vos addons tente de le retirer sans raison.
 
      --- // Commandes générales (vous pouvez générer une quantité illimitée de buttons).
      --- Important : lire ci-dessous si vous souhaitez créer vos propres buttons.

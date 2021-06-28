@@ -24,11 +24,11 @@ Admin_System_Global.Notif_Gen = { --- // Créer vos propres notifications à inc
 
 if CLIENT then
      Admin_System_Global.Notif_Bool = true --- // false = Les tickets seront visibles, et affichés directement sans la notification. / true = Afficher une notification cliquable lorsqu'un ticket est reçu, les tickets ne seront plus visibles, ils doivent être affichés seulement via la notification
-     Admin_System_Global.Ticket_CachePCharge = false  --- // true : Cacher le nom des administrateurs qui ont pris en charge le ticket aux autres administrateurs.
-     Admin_System_Global.Ticket_AntiPCharge = true --- // true = Les administrateurs ne peuvent pas reprendre un ticket déjà prise en charge. / false = Les administrateurs peuvent reprendre un ticket déjà prise en charge.
+     Admin_System_Global.Ticket_AntiPCharge = false --- // true = Les administrateurs ne peuvent pas reprendre un ticket déjà prise en charge. / false = Les administrateurs peuvent reprendre un ticket déjà prise en charge.
      --- //
      Admin_System_Global.Ticket_Delai = 1500 --- // Temps avant la fermeture d'un ticket en seconde - // Inclure 0 si vous ne voulez pas de délai de fermeture automatique.
      Admin_System_Global.Ticket_TicketVisible = 3 --- // Indiquer ici le maximum de ticket qui seront visibles sur votre écran.
+     Admin_System_Global.Ticket_CachePCharge = false  --- // true : Cacher le nom des administrateurs qui ont pris en charge le ticket aux autres administrateurs.
      --- //
      Admin_System_Global.Ticket_CachePCharge_Text = "Un administrateur"  --- // Le texte qui va être remplacé, si vous avez caché le nom lors de la prise en charge.
      Admin_System_Global.Notif_Son = "ui/hint.wav"  --- // Son lorsqu'un ticket est reçu -- https://maurits.tv/data/garrysmod/wiki/wiki.garrysmod.com/index8f77.html
@@ -39,7 +39,7 @@ if CLIENT then
 else
      Admin_System_Global.Ticket_Text = "Le ticket a bien été envoyé, temps de réponse estimé max : 10 minutes !" --- // Le texte a affiché lorsqu'un joueur a envoyé un ticket aux administrateurs.
      --- //
-     Admin_System_Global.Take_Ticket = 15 --- // Temps en secondes entre les différentes prises en charge des tickets par l'administrateur via le button "prendre ticket" / Anti-SPAM.
+     Admin_System_Global.Take_Ticket = 10 --- // Temps en secondes entre les différentes prises en charge des tickets par l'administrateur via le button "prendre ticket" / Anti-SPAM.
      Admin_System_Global.Ticket_EnvJoueur = 5 --- // Temps en secondes avant qu'un joueur puisse à nouveau envoyer un ticket / Anti-SPAM.
      --- //
      Admin_System_Global.Ticket_CachePCharge_Jr = false --- // true = Cacher la notification de prise en charge envoyée aux joueurs.
